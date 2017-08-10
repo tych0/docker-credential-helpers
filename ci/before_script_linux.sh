@@ -18,5 +18,5 @@ Expire-Date: 0
 %echo done
 EOF
 
-key=$(gpg --list-keys | grep pub | cut -d/ -f2 | cut -d" " -f1)
+key=$(gpg --list-secret-keys | grep pub | cut -d/ -f2 | cut -d" " -f1)
 pass init $key
