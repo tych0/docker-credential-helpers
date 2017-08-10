@@ -22,5 +22,5 @@ echo keys
 gpg --list-keys
 echo secret keys
 gpg --list-secret-keys
-key=$(gpg --no-auto-check-trustdb --list-secret-keys | grep pub | cut -d/ -f2 | cut -d" " -f1)
+key=$(gpg --no-auto-check-trustdb --list-secret-keys | grep sec | cut -d/ -f2 | cut -d" " -f1)
 pass init $key
